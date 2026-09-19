@@ -5,75 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sophie 的个人主页</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            color: #ffffff;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #e2e8f0;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            line-height: 1.6;
         }
         .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        header {
             text-align: center;
-            padding: 40px 30px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            max-width: 500px;
-            width: 90%;
+            margin-bottom: 50px;
+        }
+        .avatar {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
         }
         h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            font-size: 2.4em;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #a78bfa, #60a5fa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .subtitle {
+        .tagline {
+            color: #94a3b8;
             font-size: 1.1em;
-            color: #a0aec0;
-            margin-bottom: 30px;
+        }
+        section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        section h2 {
+            font-size: 1.25em;
+            margin-bottom: 16px;
+            color: #c4b5fd;
+        }
+        .about p {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
         .links a {
             display: inline-block;
-            margin: 8px 12px;
-            padding: 10px 22px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #e2e8f0;
             text-decoration: none;
             border-radius: 30px;
-            transition: all 0.3s ease;
             font-size: 0.95em;
+            transition: all 0.25s ease;
         }
         .links a:hover {
-            background: #3a7bd5;
+            background: #6366f1;
             transform: translateY(-2px);
         }
-        .footer {
-            margin-top: 40px;
-            font-size: 0.85em;
-            color: #718096;
+        .coming-soon {
+            color: #94a3b8;
+            font-size: 0.95em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sophie</h1>
-        <div class="subtitle">个人主页 · 正在学习与探索</div>
-        
-        <div class="links">
-            <a href="https://github.com/Sophieowens431-Max" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Telegram</a>
-            <a href="#" target="_blank">导航页</a>
-        </div>
+        <header>
+            <div class="avatar">S</div>
+            <h1>Sophie</h1>
+            <div class="tagline">正在学习 · 探索 · 记录</div>
+        </header>
 
-        <div class="footer">
-            以后这里会放文章和图片
-        </div>
+        <section class="about">
+            <h2>关于我</h2>
+            <p>你好，我是 Sophie。</p>
+            <p>目前正在学习编程和各种有趣的工具，喜欢把学到的东西一步步实践出来。</p>
+            <p>这个主页会慢慢放一些我的学习记录、文章和图片。</p>
+        </section>
+
+        <section>
+            <h2>常用链接</h2>
+            <div class="links">
+                <a href="https://github.com/Sophieowens431-Max" target="_blank">GitHub</a>
+                <a href="https://sophieowens431-max.github.io/" target="_blank">个人主页</a>
+                <!-- 以后可以在这里加 Telegram、导航页等链接 -->
+            </div>
+        </section>
+
+        <section>
+            <h2>文章</h2>
+            <p class="coming-soon">即将更新，敬请期待...</p>
+        </section>
+
+        <section>
+            <h2>图片</h2>
+            <p class="coming-soon">即将更新，敬请期待...</p>
+        </section>
+
+        <footer>
+            © 2026 Sophie · Built with GitHub Pages
+        </footer>
     </div>
 </body>
 </html>
